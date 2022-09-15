@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.lblCred = new System.Windows.Forms.Label();
             this.lblDebito = new System.Windows.Forms.Label();
             this.txtCredito = new System.Windows.Forms.TextBox();
@@ -38,6 +39,10 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblSaldoInicialValor = new System.Windows.Forms.Label();
+            this.lblSaldoValor = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCred
@@ -125,19 +130,67 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(269, 313);
+            this.btnCalcular.ForeColor = System.Drawing.Color.Black;
+            this.btnCalcular.Location = new System.Drawing.Point(619, 324);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(146, 47);
+            this.btnCalcular.Padding = new System.Windows.Forms.Padding(5);
+            this.btnCalcular.Size = new System.Drawing.Size(128, 36);
             this.btnCalcular.TabIndex = 17;
-            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.Text = resources.GetString("btnCalcular.Text");
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // lblSaldoInicialValor
+            // 
+            this.lblSaldoInicialValor.AutoSize = true;
+            this.lblSaldoInicialValor.Location = new System.Drawing.Point(729, 122);
+            this.lblSaldoInicialValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaldoInicialValor.Name = "lblSaldoInicialValor";
+            this.lblSaldoInicialValor.Size = new System.Drawing.Size(18, 18);
+            this.lblSaldoInicialValor.TabIndex = 18;
+            this.lblSaldoInicialValor.Text = "0";
+            this.lblSaldoInicialValor.Click += new System.EventHandler(this.lblSaldoInicialValor_Click);
+            // 
+            // lblSaldoValor
+            // 
+            this.lblSaldoValor.AutoSize = true;
+            this.lblSaldoValor.Location = new System.Drawing.Point(686, 202);
+            this.lblSaldoValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSaldoValor.Name = "lblSaldoValor";
+            this.lblSaldoValor.Size = new System.Drawing.Size(18, 18);
+            this.lblSaldoValor.TabIndex = 19;
+            this.lblSaldoValor.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(595, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 18);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "SALDO INICIAL:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(595, 202);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 18);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "SALDO:";
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(649, 372);
+            this.ClientSize = new System.Drawing.Size(850, 372);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSaldoValor);
+            this.Controls.Add(this.lblSaldoInicialValor);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCred);
@@ -156,6 +209,7 @@
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCliente";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +228,10 @@
         private Label label1;
         private Button btContinue;
         private Button btnCalcular;
+        private Label lblSaldoInicialValor;
+        private Label lblSaldoValor;
+        private Label label4;
+        private Label label2;
+        private Label label3;
     }
 }
