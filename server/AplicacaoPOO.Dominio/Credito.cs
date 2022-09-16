@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AplicacaoPOO.Dominio
 {
-    private class Credito 
+    public class Credito 
     {
         Pagamento Pagamento { get; set; }
         int Parcelas { get; set; }

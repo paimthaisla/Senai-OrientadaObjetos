@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AplicacaoPOO.Dominio
 {
-    private class Debito  //debitar valores: Como? 
+    public class Debito  //debitar valores: Como? 
     {
         Pagamento Pagamento { get; set; }
         double Desconto { get; set; }
