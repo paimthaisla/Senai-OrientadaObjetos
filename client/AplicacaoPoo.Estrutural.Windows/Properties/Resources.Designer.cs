@@ -79,5 +79,55 @@ namespace AplicacaoPoo.Estrutural.Windows.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grupo_de_usuarios {
+            get {
+                object obj = ResourceManager.GetObject("grupo-de-usuarios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_do_usuario_com_fundo_preto {
+            get {
+                object obj = ResourceManager.GetObject("imagem-do-usuario-com-fundo-preto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_do_usuario_com_fundo_preto__1_ {
+            get {
+                object obj = ResourceManager.GetObject("imagem-do-usuario-com-fundo-preto (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagem_do_usuario_com_fundo_preto__2_ {
+            get {
+                object obj = ResourceManager.GetObject("imagem-do-usuario-com-fundo-preto (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sombra_de_usuario_masculino {
+            get {
+                object obj = ResourceManager.GetObject("sombra-de-usuario-masculino", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -8,5 +8,8 @@ namespace AplicacaoPOO.Dominio
 {
     public class Moeda
     {
+ 
+
+
     }
 }

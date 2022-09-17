@@ -21,7 +21,7 @@ namespace AplicacaoPoo.Estrutural.Windows
 
         private void btnAbrirFormConversão_Click(object sender, EventArgs e)
         {
-            var form = new frmConversao();
+            var form = new frmConversãoReal();
             form.Show();
         }
 

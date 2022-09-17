@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAbrirFormConversão = new System.Windows.Forms.Button();
+            this.btnAbrirFormConversãoValorReal = new System.Windows.Forms.Button();
             this.btnAbrirFormPagamento = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnAbrirFormConversão
+            // btnAbrirFormConversãoValorReal
             // 
-            this.btnAbrirFormConversão.BackColor = System.Drawing.Color.Red;
-            this.btnAbrirFormConversão.FlatAppearance.BorderSize = 5;
-            this.btnAbrirFormConversão.Location = new System.Drawing.Point(273, 262);
-            this.btnAbrirFormConversão.Name = "btnAbrirFormConversão";
-            this.btnAbrirFormConversão.Size = new System.Drawing.Size(90, 38);
-            this.btnAbrirFormConversão.TabIndex = 0;
-            this.btnAbrirFormConversão.Text = "Conversão REAL/DOLAR";
-            this.btnAbrirFormConversão.UseVisualStyleBackColor = false;
+            this.btnAbrirFormConversãoValorReal.BackColor = System.Drawing.Color.Red;
+            this.btnAbrirFormConversãoValorReal.FlatAppearance.BorderSize = 5;
+            this.btnAbrirFormConversãoValorReal.Location = new System.Drawing.Point(273, 262);
+            this.btnAbrirFormConversãoValorReal.Name = "btnAbrirFormConversãoValorReal";
+            this.btnAbrirFormConversãoValorReal.Size = new System.Drawing.Size(90, 38);
+            this.btnAbrirFormConversãoValorReal.TabIndex = 0;
+            this.btnAbrirFormConversãoValorReal.Text = "Conversão REAL/DOLAR";
+            this.btnAbrirFormConversãoValorReal.UseVisualStyleBackColor = false;
+            this.btnAbrirFormConversãoValorReal.Click += new System.EventHandler(this.btnAbrirFormConversão_Click);
             // 
             // btnAbrirFormPagamento
             // 
@@ -62,7 +63,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAbrirFormPagamento);
-            this.Controls.Add(this.btnAbrirFormConversão);
+            this.Controls.Add(this.btnAbrirFormConversãoValorReal);
             this.Font = new System.Drawing.Font("Monospac821 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Name = "Principalfmr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -73,7 +74,7 @@
 
         #endregion
 
-        private Button btnAbrirFormConversão;
+        private Button btnAbrirFormConversãoValorReal;
         private Button btnAbrirFormPagamento;
     }
 }
