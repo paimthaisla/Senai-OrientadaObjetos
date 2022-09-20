@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoPoo.Estrutural.Windows
 {
-    partial class Principalfmr
+    partial class frmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -38,24 +38,26 @@
             this.btnAbrirFormConversãoValorReal.FlatAppearance.BorderSize = 5;
             this.btnAbrirFormConversãoValorReal.Location = new System.Drawing.Point(273, 262);
             this.btnAbrirFormConversãoValorReal.Name = "btnAbrirFormConversãoValorReal";
-            this.btnAbrirFormConversãoValorReal.Size = new System.Drawing.Size(90, 38);
+            this.btnAbrirFormConversãoValorReal.Size = new System.Drawing.Size(90, 42);
             this.btnAbrirFormConversãoValorReal.TabIndex = 0;
             this.btnAbrirFormConversãoValorReal.Text = "Conversão REAL/DOLAR";
             this.btnAbrirFormConversãoValorReal.UseVisualStyleBackColor = false;
+            this.btnAbrirFormConversãoValorReal.BackColorChanged += new System.EventHandler(this.btnAbrirFormConversão_Click);
             this.btnAbrirFormConversãoValorReal.Click += new System.EventHandler(this.btnAbrirFormConversão_Click);
+            this.btnAbrirFormConversãoValorReal.MouseHover += new System.EventHandler(this.btnAbrirFormConversãoValorReal_MouseHover);
             // 
             // btnAbrirFormPagamento
             // 
             this.btnAbrirFormPagamento.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnAbrirFormPagamento.Location = new System.Drawing.Point(440, 262);
             this.btnAbrirFormPagamento.Name = "btnAbrirFormPagamento";
-            this.btnAbrirFormPagamento.Size = new System.Drawing.Size(90, 38);
+            this.btnAbrirFormPagamento.Size = new System.Drawing.Size(90, 42);
             this.btnAbrirFormPagamento.TabIndex = 1;
             this.btnAbrirFormPagamento.Text = "Pagamento";
             this.btnAbrirFormPagamento.UseVisualStyleBackColor = false;
             this.btnAbrirFormPagamento.Click += new System.EventHandler(this.btnAbrirFormPagamento_Click);
             // 
-            // Principalfmr
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -65,7 +67,7 @@
             this.Controls.Add(this.btnAbrirFormPagamento);
             this.Controls.Add(this.btnAbrirFormConversãoValorReal);
             this.Font = new System.Drawing.Font("Monospac821 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Name = "Principalfmr";
+            this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principalfmr";
             this.ResumeLayout(false);

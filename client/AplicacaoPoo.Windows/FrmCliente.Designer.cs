@@ -138,6 +138,7 @@
             this.btnCalcular.TabIndex = 17;
             this.btnCalcular.Text = resources.GetString("btnCalcular.Text");
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.BackColorChanged += new System.EventHandler(this.btnCalcular_Click);
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // lblSaldoInicialValor

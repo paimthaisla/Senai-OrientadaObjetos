@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace AplicacaoPoo.Estrutural.Windows
 {
-    public partial class Principalfmr : Form
+    public partial class frmPrincipal : Form //classe
     {
-        public Principalfmr()
+        public frmPrincipal()  //construtor //identificar p construtor - campos já pré-definidos.9                                                                                                                                                                                                                                                                                          
         {
             InitializeComponent();
         
@@ -29,6 +29,11 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             var form = new frmPagamento();
             form.Show();
+        }
+
+        private void btnAbrirFormConversãoValorReal_MouseHover(object sender, EventArgs e)
+        {
+           btnAbrirFormConversãoValorReal.BackColor = Color.Black;
         }
     }
 }

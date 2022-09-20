@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacaoPOO.Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,22 +16,30 @@ namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
         public frmConversãoReal()
         {
             InitializeComponent();
-
-
         }
 
         private void btnConverter_Click(object sender, EventArgs e)
         {
 
-            var dolar = float.Parse(txtValorAtualDolar.Text);
-            var real = float.Parse(txtValorConverterReal.Text);
-
-            var resultado = dolar * real;
-            var mensagem = resultado.ToString();
-            string titulo = " Valor Convertido";
-            MessageBox.Show(mensagem, titulo);
-
+            var dolar = decimal.Parse(txtValorAtualDolar.Text);
+            var real = decimal.Parse(txtValorConverterReal.Text);
+ 
         }
 
+        private void btnConverter_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var resultado = decimal.Parse(txtValorConverterReal.Text);  
+            }
+
+            catch(Exception)
+            {
+                MessageBox.Show("Preencha com números!");
+                txtValorConverterReal.Focus();
+
+                throw;
+            }
+        }
     }
 }
