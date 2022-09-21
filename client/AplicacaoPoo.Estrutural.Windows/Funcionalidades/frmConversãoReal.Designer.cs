@@ -46,7 +46,6 @@
             this.btnConverter.TabIndex = 20;
             this.btnConverter.Text = "CONVERTER";
             this.btnConverter.UseVisualStyleBackColor = true;
-            this.btnConverter.TextChanged += new System.EventHandler(this.btnConverter_TextChanged);
             this.btnConverter.Click += new System.EventHandler(this.btnConverter_Click);
             // 
             // txtValorConverterReal
@@ -55,6 +54,7 @@
             this.txtValorConverterReal.Name = "txtValorConverterReal";
             this.txtValorConverterReal.Size = new System.Drawing.Size(100, 23);
             this.txtValorConverterReal.TabIndex = 18;
+            this.txtValorConverterReal.TextChanged += new System.EventHandler(this);
             // 
             // label5
             // 
@@ -71,6 +71,7 @@
             this.txtValorAtualDolar.Name = "txtValorAtualDolar";
             this.txtValorAtualDolar.Size = new System.Drawing.Size(100, 23);
             this.txtValorAtualDolar.TabIndex = 16;
+            this.txtValorAtualDolar.TextChanged += new System.EventHandler(this.txtValorAtualDolar_TextChanged);
             // 
             // label4
             // 

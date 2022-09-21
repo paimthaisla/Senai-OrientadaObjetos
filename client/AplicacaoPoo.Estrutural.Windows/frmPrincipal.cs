@@ -33,7 +33,7 @@ namespace AplicacaoPoo.Estrutural.Windows
 
         private void btnAbrirFormConversãoValorReal_MouseHover(object sender, EventArgs e)
         {
-           btnAbrirFormConversãoValorReal.BackColor = Color.Black;
+           btnAbrirFormConversãoValorReal.BackColor = Color.Blue;
         }
     }
 }
