@@ -76,6 +76,7 @@
             this.txtIdVendedor.Name = "txtIdVendedor";
             this.txtIdVendedor.Size = new System.Drawing.Size(138, 23);
             this.txtIdVendedor.TabIndex = 3;
+            
             // 
             // label3
             // 
@@ -133,7 +134,7 @@
             this.btnConcluirVenda.TabIndex = 10;
             this.btnConcluirVenda.Text = "CONCLUIR VENDA";
             this.btnConcluirVenda.UseVisualStyleBackColor = true;
-            this.btnConcluirVenda.Click += new System.EventHandler(this.btnConcluirVenda_Click);
+
             // 
             // label6
             // 
@@ -147,7 +148,7 @@
             // lblValorTotal
             // 
             this.lblValorTotal.AutoSize = true;
-            this.lblValorTotal.Location = new System.Drawing.Point(62, 364);
+            this.lblValorTotal.Location = new System.Drawing.Point(62, 356);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(13, 15);
             this.lblValorTotal.TabIndex = 12;

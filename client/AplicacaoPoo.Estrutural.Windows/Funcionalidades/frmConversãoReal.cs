@@ -1,4 +1,5 @@
 ﻿using AplicacaoPOO.Dominio;
+using AplicacaoPOO.Dominio.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,78 +14,47 @@ namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
 {
     public partial class frmConversãoReal : Form
     {
-        private bool CotacaoEhvalido; //Todo valor inical bool é falso; (private) pq só usará estás variáveis neste formulário.
-        private bool ValoremDolarValido;
-
+     
         public frmConversãoReal()
         {
             InitializeComponent();
-            habilitarOuDesabilitarBotaoCalcularConversao();
+            btnConverter.Enabled = false;
+            
         }
 
         private void btnConverter_Click(object sender, EventArgs e)
         {
+          
+            var moeda = new ConverterMoedaServices(); //variavel que recebe o valor da Classe 
+            var real = decimal.Parse(txtValorConverterReal.Text); // variavel que recebe o valor do TextBox
 
-            var dolar = decimal.Parse(txtValorAtualDolar.Text);
-            var real = decimal.Parse(txtValorConverterReal.Text);
-
-            var resultado = dolar * real;
-            MessageBox.Show("O resultado é: " + resultado);
-                
- 
+            //string interpolation
+            var resultado = moeda.ConverterDolarEmReal(real);
+            MessageBox.Show($"O Valor convertido é: {resultado} reais");
+           
         }
-
-        private void txtValorAtualDolar_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                var resultado = decimal.Parse(txtValorAtualDolar.Text);
-                CotacaoEhvalido = true;
-                habilitarOuDesabilitarBotaoCalcularConversao();
-            }
-
-            catch (Exception)
-            {
-                MessageBox.Show("Preencha apenas com números!");
-                txtValorAtualDolar.Show();
-                CotacaoEhvalido = false;
-                habilitarOuDesabilitarBotaoCalcularConversao();
-
-            }
-
-        }
-
 
         private void txtValorConverterReal_TextChanged(object sender, EventArgs e)
         {
             try
             {
+                if (txtValorConverterReal.Text == "")
+                {
+                    btnConverter.Enabled = false;
+                    return;
+                }
+                
                 var resultado = decimal.Parse(txtValorConverterReal.Text);
-                ValoremDolarValido = true;
-                habilitarOuDesabilitarBotaoCalcularConversao();
+                btnConverter.Enabled = true;
             }
 
             catch (Exception)
             {
                 MessageBox.Show("Preencha apenas com números!");
                 txtValorConverterReal.Focus();
-                ValoremDolarValido = false;
-                habilitarOuDesabilitarBotaoCalcularConversao();
-            }
-        }
-
-        private void habilitarOuDesabilitarBotaoCalcularConversao()
-        {
-            if (ValoremDolarValido && CotacaoEhvalido)
-            {
-                btnConverter.Enabled = true;
-            }
-            else
-            {
                 btnConverter.Enabled = false;
+
             }
         }
-
-       
     }
 }

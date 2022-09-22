@@ -31,16 +31,14 @@
             this.btnConverter = new System.Windows.Forms.Button();
             this.txtValorConverterReal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtValorAtualDolar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnConverter
             // 
-            this.btnConverter.Location = new System.Drawing.Point(228, 292);
+            this.btnConverter.Location = new System.Drawing.Point(220, 157);
             this.btnConverter.Name = "btnConverter";
             this.btnConverter.Size = new System.Drawing.Size(120, 32);
             this.btnConverter.TabIndex = 20;
@@ -50,46 +48,29 @@
             // 
             // txtValorConverterReal
             // 
-            this.txtValorConverterReal.Location = new System.Drawing.Point(378, 196);
+            this.txtValorConverterReal.Location = new System.Drawing.Point(334, 110);
             this.txtValorConverterReal.Name = "txtValorConverterReal";
             this.txtValorConverterReal.Size = new System.Drawing.Size(100, 23);
             this.txtValorConverterReal.TabIndex = 18;
-            this.txtValorConverterReal.TextChanged += new System.EventHandler(this);
+            this.txtValorConverterReal.TextChanged += new System.EventHandler(this.txtValorConverterReal_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(92, 204);
+            this.label5.Location = new System.Drawing.Point(71, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(216, 15);
             this.label5.TabIndex = 17;
             this.label5.Text = "VALOR DOLAR CONVERTIDO PRA REAL:";
             // 
-            // txtValorAtualDolar
-            // 
-            this.txtValorAtualDolar.Location = new System.Drawing.Point(309, 134);
-            this.txtValorAtualDolar.Name = "txtValorAtualDolar";
-            this.txtValorAtualDolar.Size = new System.Drawing.Size(100, 23);
-            this.txtValorAtualDolar.TabIndex = 16;
-            this.txtValorAtualDolar.TextChanged += new System.EventHandler(this.txtValorAtualDolar_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(198, 81);
+            this.label4.Location = new System.Drawing.Point(174, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "Insira as informações corretamente:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 15);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "VALOR ATUAL DO DOLAR: ";
             // 
             // label2
             // 
@@ -103,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(92, 34);
+            this.label1.Location = new System.Drawing.Point(71, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(407, 20);
             this.label1.TabIndex = 12;
@@ -114,13 +95,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(601, 450);
+            this.ClientSize = new System.Drawing.Size(542, 216);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.txtValorConverterReal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtValorAtualDolar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmConversãoReal";
@@ -138,9 +117,7 @@
         private Label label6;
         private TextBox txtValorConverterReal;
         private Label label5;
-        private TextBox txtValorAtualDolar;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Label label1;
     }
