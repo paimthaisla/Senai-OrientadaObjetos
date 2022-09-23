@@ -1,4 +1,5 @@
 ﻿using AplicacaoPOO.Dominio;
+using AplicacaoPOO.Dominio.Helpers;
 using AplicacaoPOO.Dominio.services;
 using System;
 using System.Collections.Generic;
@@ -14,46 +15,73 @@ namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
 {
     public partial class frmConversãoReal : Form
     {
-     
+        private int moeda;
+
         public frmConversãoReal()
         {
             InitializeComponent();
-            btnConverter.Enabled = false;
+            lblPrimeiroValor.Text = $"1 {MoedaHelper.Dolar} igual a:";
+            lblSegundoValor.Text = $"5,12 {MoedaHelper.Real}";
+        }
             
-        }
 
-        private void btnConverter_Click(object sender, EventArgs e)
-        {
-          
-            var moeda = new ConverterMoedaServices(); //variavel que recebe o valor da Classe 
-            var real = decimal.Parse(txtValorConverterReal.Text); // variavel que recebe o valor do TextBox
 
-            //string interpolation
-            var resultado = moeda.ConverterDolarEmReal(real);
-            MessageBox.Show($"O Valor convertido é: {resultado} reais");
-           
-        }
 
         private void txtValorConverterReal_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if (txtValorConverterReal.Text == "")
+                if (txtValorConverterReal.Text == "") return;
                 {
-                    btnConverter.Enabled = false;
-                    return;
-                }
-                
-                var resultado = decimal.Parse(txtValorConverterReal.Text);
-                btnConverter.Enabled = true;
-            }
+                    var dolar = decimal.Parse(txtValorConverterReal.Text);
 
+                   
+                    var moeda = new ConverterMoedaServices(); //variave
+                    var resultado = moeda.ConverterDolarEmReal(dolar);
+                    lblPrimeiroValor.Text = $"{dolar} {MoedaHelper.Dolar}";
+                    lblSegundoValor.Text = $"{resultado} {MoedaHelper.Real}";
+
+                }
+            }
+           
             catch (Exception)
             {
                 MessageBox.Show("Preencha apenas com números!");
                 txtValorConverterReal.Focus();
-                btnConverter.Enabled = false;
 
+
+            }
+        }
+
+        private void cbxMoeda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbxMoeda_SelectedIndexChanged)
+            {
+                case "Dolar":
+                    
+                    var dolar = decimal.Parse(txtValorConverterReal.Text);
+
+
+                    var moeda = new ConverterMoedaServices(); //variave
+                    var resultado = moeda.ConverterDolarEmReal(dolar);
+                    lblPrimeiroValor.Text = $"{dolar} {MoedaHelper.Dolar}";
+                    lblSegundoValor.Text = $"{resultado} {MoedaHelper.Real}";
+                    break;
+
+            case Euro:
+                    MessageBox.Show("123");
+                    lblPrimeiroValor.Text = $"1 {MoedaHelper.Euro} igual a:";
+                    lblSegundoValor.Text = $"6,12 {MoedaHelper.Real}";
+
+                    var euro = decimal.Parse(txtValorConverterReal.Text);
+
+
+                    var moeda2 = new ConverterMoedaServices(); //variave
+                    var resultado2 = moeda2.ConverterDolarEmReal(euro);
+                    lblPrimeiroValor.Text = $"{euro} {MoedaHelper.Euro}";
+                    lblSegundoValor.Text = $"{resultado2} {MoedaHelper.Euro}";
+
+                    break;
             }
         }
     }
