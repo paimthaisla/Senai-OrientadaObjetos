@@ -123,6 +123,16 @@ namespace AplicacaoPoo.Estrutural.Windows.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap senai {
+            get {
+                object obj = ResourceManager.GetObject("senai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sombra_de_usuario_masculino {
             get {
                 object obj = ResourceManager.GetObject("sombra-de-usuario-masculino", resourceCulture);

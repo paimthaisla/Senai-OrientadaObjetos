@@ -76,7 +76,6 @@
             this.txtIdVendedor.Name = "txtIdVendedor";
             this.txtIdVendedor.Size = new System.Drawing.Size(138, 23);
             this.txtIdVendedor.TabIndex = 3;
-            
             // 
             // label3
             // 
@@ -134,7 +133,6 @@
             this.btnConcluirVenda.TabIndex = 10;
             this.btnConcluirVenda.Text = "CONCLUIR VENDA";
             this.btnConcluirVenda.UseVisualStyleBackColor = true;
-
             // 
             // label6
             // 
@@ -174,6 +172,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmPagamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagamento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
