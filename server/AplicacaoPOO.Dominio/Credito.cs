@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace AplicacaoPOO.Dominio
 {
-    public class Credito
+    public class Credito 
     {
         Pagamento Pagamento { get; set; }
         int Parcelas { get; set; }
         float Juros { get; set; }
+
+    public double DebitarValor(double saldo, double desconto)
+    {
+        var resultado = saldo - desconto;
+        return resultado;   //não precisa do igual
+    }
+
     }
 }
+

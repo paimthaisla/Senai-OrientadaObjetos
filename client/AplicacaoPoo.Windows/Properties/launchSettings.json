@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AplicacaoPoo.Windows": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\thaísla-workspace\\repos\\Senai-AplicacaoPoo.Estrutural.Windows"
+    }
+  }
+}
