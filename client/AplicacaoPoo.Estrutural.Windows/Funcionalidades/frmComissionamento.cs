@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
 {
 
-    public partial class frmPagamento : Form
+    public partial class frmComissionamento : Form
     {
-        public frmPagamento()
+        public frmComissionamento()
         {
             InitializeComponent();
         }

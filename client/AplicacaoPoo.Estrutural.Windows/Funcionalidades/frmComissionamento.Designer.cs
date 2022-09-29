@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
 {
-    partial class frmPagamento
+    partial class frmComissionamento
     {
         /// <summary>
         /// Required designer variable.
