@@ -27,13 +27,29 @@ namespace AplicacaoPoo.Estrutural.Windows
 
         private void btnAbrirFormPagamento_Click(object sender, EventArgs e)
         {
-            var form = new frmPagamento();
+            var form = new frmComissionamento();
             form.Show();
         }
 
         private void btnAbrirFormConversãoValorReal_MouseHover(object sender, EventArgs e)
         {
            btnAbrirFormConversãoValorReal.BackColor = Color.Blue;
+        }
+
+        private void conversorDeMoedasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmConversãoReal();
+            form.MdiParent = this;
+            form.Show();
+
+            
+        }
+
+        private void comissionamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmComissionamento();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }
