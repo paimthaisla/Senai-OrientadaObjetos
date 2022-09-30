@@ -85,7 +85,7 @@
             "Dolar Americano",
             "Euro ",
             "Libra"});
-            this.cbxMoeda.Location = new System.Drawing.Point(345, 48);
+            this.cbxMoeda.Location = new System.Drawing.Point(358, 38);
             this.cbxMoeda.Name = "cbxMoeda";
             this.cbxMoeda.Size = new System.Drawing.Size(118, 23);
             this.cbxMoeda.TabIndex = 19;
@@ -96,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(487, 273);
+            this.ClientSize = new System.Drawing.Size(488, 242);
             this.Controls.Add(this.cbxMoeda);
             this.Controls.Add(this.txtValorConverterReal);
             this.Controls.Add(this.lblSegundoValor);

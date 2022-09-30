@@ -31,6 +31,7 @@ namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
             list.Add(MoedaHelper.Libras);
             cbxMoeda.DataSource = list;
             cbxMoeda.SelectedIndex = 0;
+
         }
 
 
@@ -59,6 +60,7 @@ namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
 
                 try
                 {
+                    
                     #region Cálculo de Conversão
                     //const - único em todo sistema; Configurações padrões;
 
