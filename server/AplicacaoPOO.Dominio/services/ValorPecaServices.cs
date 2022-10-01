@@ -13,6 +13,4 @@ namespace AplicacaoPOO.Dominio.services
         public decimal Corrente = 10.20m;
         public decimal Pneu = 36.10m;
     }
-      
-
 }

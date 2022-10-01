@@ -118,7 +118,6 @@
         private Label lblSegundoValor;
         private Label label2;
         private Label lblPrimeiroValor;
-        private ComboBox comboBox1;
         private ComboBox cbxMoeda;
     }
 }

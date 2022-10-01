@@ -20,87 +20,46 @@ namespace AplicacaoPoo.Estrutural.Windows.Funcionalidades
         {
             InitializeComponent();
             var produtos = new Produto();
+            btnConcluirVenda.Enabled = false;
 
-            cbxSelecionarCodigodaPeça.DataSource = produtos.ListaProdutosFakes();
-            cbxSelecionarCodigodaPeça.DisplayMember = "Nome";
-            cbxSelecionarCodigodaPeça.ValueMember = "Codigo";
-
-  
-        }
-
-        private void txtValorUnitarioPeça_TextChanged(object sender, EventArgs e)
-        {
+            cbxSelecionarNomeDaPeca.DataSource = produtos.ListaProdutosFakes();
+            cbxSelecionarNomeDaPeca.DisplayMember = "Nome";
+            cbxSelecionarNomeDaPeca.ValueMember = "Codigo";
         }
 
         private void txtQuantidadeVendidaPeça_TextChanged(object sender, EventArgs e)
         {
-            //Aqui será digitado a quantidade de peças vendidas para o cliente. 
-            //será uma variável inteira pq não se pode vender uma "peça e meia".
 
-            if (txtQuantidadeVendidaPeça.Text == "") return;
+
             
-                try
-                {
-                    var num = int.Parse(txtQuantidadeVendidaPeça.Text);
-                    var quant = new ValorPecaServices();
-                    
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Querido usuário,\nVocê precisa informar um valor NUMÉRICO\nEx.:100");
-                    txtQuantidadeVendidaPeça.Text = String.Empty;
-                    txtQuantidadeVendidaPeça.Focus();
-                }
-            
+
+            if (txtInserirQuantidadeVendidaDaPeca.Text == "") return;
+
+            try
+            {
+                var num = int.Parse(txtInserirQuantidadeVendidaDaPeca.Text);
+                var quantidade = new ValorPecaServices();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Querido usuário,\nVocê precisa informar um valor NUMÉRICO\nEx.:100");
+                txtInserirQuantidadeVendidaDaPeca.Text = String.Empty;
+                txtInserirQuantidadeVendidaDaPeca.Focus();
+            }
+
         }
 
-        private void cbxSelecionarCodigodaPeça_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxSelecionarNomeDaPeca_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var valor = new ValorPecaServices();
 
+            var dados = (Produto)cbxSelecionarNomeDaPeca.SelectedValue;
+            var listaFake = dados.ListaProdutosFakes();
 
-            switch (cbxSelecionarCodigodaPeça.SelectedValue)
-            {
-                case CodigodaPeça.PecaUm:
-                    {
-                       
-                        break;
-                    }
-
-                case CodigodaPeça.PecaDois:
-                    {
-                        
-                        break;
-                    }
-                case CodigodaPeça.PecaTres:
-                    {
-                      
-                        break;
-                    }
-            }
-        }
-
-        private void cbxIdFuncionario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (cbxIdFuncionario.SelectedValue)
-            {
-                case IdsFuncionarios.IdUm:
-                    {
-                        lblNome.Text = $"{Funcionarios.FUm}";
-                        break;
-                    }
-                case IdsFuncionarios.IdDois:
-                    {
-                        lblNome.Text = $"{Funcionarios.FDois}";
-                        break;
-                    }
-                case IdsFuncionarios.IdTres:
-                    {
-                        lblNome.Text = $"{Funcionarios.FTres}";
-                        break;
-                    }
-            }
+            var resultado = listaFake.Where(x => x.Codigo == dados.Codigo).FirstOrDefault();
+            txtCodigoDoProduto.Text = resultado.Codigo.ToString();
+            txtValorUnitarioDoProduto.Text = resultado.Valor.ToString();
+            
         }
     }
-
 }
