@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AplicacaoPoo.Windows\AplicacaoPoo.Windows.csproj" />
   </ItemGroup>
 
